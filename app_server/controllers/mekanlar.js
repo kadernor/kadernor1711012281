@@ -1,6 +1,6 @@
 var request = require('postman-request');
 var  apiSecenekleri = {
-  sunucu: "http://localhost:3000",
+  sunucu: "https://kadernor1711012281.herokuapp.com",
   apiYolu:'/api/mekanlar/'
 };
 var mesafeyiFormatla = function(mesafe) {
@@ -33,7 +33,7 @@ var anasayfaOlustur = function(req, res, cevap, mekanListesi) {
       siteAd : 'Mekan 32',
       aciklama : 'Isparta civarındaki mekanları keşfedin!'
     },
-    //footer : footer,
+   
     mekanlar: mekanListesi,
     mesaj: mesaj,
     cevap: cevap
