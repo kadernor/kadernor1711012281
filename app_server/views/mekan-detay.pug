@@ -56,9 +56,10 @@ block content
              +puanOlustur(yorum.puan)
             span.reviewAuthor=yorum.yorumYapan
             | &nbsp;
-            small.reviewTimestamp=yorum.tarih
+            small.reviewTimestamp
+              +tarihiFormatla(yorum.tarih)
           .col-xs-12
-             p=yorum.yorumMetni
+            p=yorum.yorumMetni
 
 
 

@@ -1,5 +1,6 @@
 var mongoose=require('mongoose')
 var Mekan=mongoose.model('mekan')
+
 const cevapOlustur=function(res,status,content){
 	res
 	.status(status)
@@ -21,6 +22,7 @@ const mekanlariListele = async(req, res) => {
 	  distanceField: "mesafe",
 	  spherical: true,
 	  key: "koordinatlar"
+	  //maxDistance: 20000
 	};
 	
 	if(!enlem || !boylam){
@@ -42,7 +44,7 @@ const mekanlariListele = async(req, res) => {
 		adres: mekan.adres,
 		puan: mekan.puan,
 		imkanlar: mekan.imkanlar,
-		mesafe: mekan.mesafe.toFixed() + ' m'
+		mesafe: mekan.mesafe.toFixed() 
 	  }});
   
 	  cevapOlustur(res, 200, mekanlar);
